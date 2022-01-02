@@ -30,6 +30,9 @@ subjectAltName = @alt_names
 
 [alt_names]
 IP.1 = $IP
+DNS.1   = david.local
+DNS.2   = david
+DNS.3   = eidolon
 " > san.cnf
 
 openssl req -x509 -nodes -days 730 -newkey rsa:2048 -keyout key.pem -out cert.pem -config san.cnf
